@@ -5,7 +5,6 @@
     --secondary_color: #A6E5B8;
     --accent-color: #15161C;
     --default-color: rgba(25, 28, 31, 0.4);
-    color-scheme: light dark;
 }
 
 * {
@@ -27,7 +26,7 @@ main {
 
 h1.logo {
     color: var(--primary-color);
-    margin-top: 70px;
+    margin-top: 50px;
     font-weight: 500;
     font-size: 35px;
     letter-spacing: 0.0025em;
@@ -80,7 +79,11 @@ form > div {
     text-align: left;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: -6px;
+}
+
+.email {
+    margin: 0 7px 0 3px;
 }
 
 label {
@@ -145,6 +148,7 @@ img[alt="eye-icon"]:hover {
 
 .error-message {
     color: #BB3B3B;
+    margin-top: 5px;
 }
 
 .agreement {
@@ -207,10 +211,6 @@ img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-
 }
 
 @media screen and (min-width: 480px) {
-    body {
-        margin-top: 40px;
-    }
-
     main {
         display: flex;
         flex-direction: column-reverse;
@@ -233,8 +233,13 @@ img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-
         display: block;
     }
 
+    img[alt="cut-circle-tablet"] {
+        top: 195%;
+    }
+
     img[alt="hero-img-tablet"] {
         width: 250px;
+        margin: auto;
     }
 
     img[alt="vector-tablet"] {
@@ -243,11 +248,19 @@ img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-
 }
 
 @media screen and (min-width: 768px) {
+    body {
+        margin-top: 40px;
+    }
+
     main {
         display: grid;
         grid-template-columns: 50% auto;
         column-gap: 70px;
         width: 90%;
+    }
+
+    h1.logo {
+        margin-top: 70px;
     }
 
     input[type="email"] {
@@ -277,6 +290,7 @@ img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-
         margin-top: -30px;
         position: absolute;
         left: 0;
+        top: 156%;
     }
 
     .hero-images {
@@ -330,42 +344,5 @@ img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-
 
     img[alt="purple-dot"] {
         margin: 0 0 30px 50px;
-    }
-}
-  
-@media (prefers-color-scheme: dark) {
-    /* defaults to dark theme */
-    body {
-    --text-color: #eee;
-    --bkg-color: #121212;
-    }
-
-    body.light-theme {
-    --text-color: #222;
-    --bkg-color: #fff;
-    }
-
-    body {
-    background: var(--bkg-color);
-    }
-
-    .black {
-        color: var(--text-color)
-    }
-
-    h1.logo, p, .error-text, label {
-    color: var(--text-color);
-    }
-
-    h1.logo {
-        color: var(--primary-color);
-    }
-
-    button {
-        opacity: 0.9;
-    }
-
-    button:hover {
-        opacity: 1;
     }
 }
