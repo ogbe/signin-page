@@ -204,7 +204,7 @@ img[alt="google-icon"], img[alt="facebook-icon"] {
     margin-right: 15px;
 }
 
-img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-tablet"] {
+img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-desktop"] {
     margin-top: 30px;
     position: absolute;
     left: 0;
@@ -234,7 +234,7 @@ img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-
     }
 
     img[alt="cut-circle-tablet"] {
-        top: 195%;
+        margin-top: -60px;
     }
 
     img[alt="hero-img-tablet"] {
@@ -287,10 +287,8 @@ img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-
     }
 
     img[alt="cut-circle-desktop"] {
-        margin-top: -30px;
-        position: absolute;
-        left: 0;
-        top: 156%;
+        margin-top: -80px;
+        width: 10%;
     }
 
     .hero-images {
@@ -304,13 +302,9 @@ img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 810px) {
     img[alt="hero-img-desktop"] {
-        width: 300px;
-    }
-
-    img[alt="hero-img-desktop"] {
-        width: 300px;
+        width: 280px;
     }
 }
 
@@ -318,7 +312,7 @@ img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-
     main {
         display: grid;
         grid-template-columns: 40% auto;
-        column-gap: 90px;
+        column-gap: 160px;
         width: 90%;
     }
 }
@@ -342,6 +336,9 @@ img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-
         width: 400px;
     }
 
+    img[alt="cut-circle-desktop"] {
+        margin-top: -100px;
+    }
     img[alt="purple-dot"] {
         margin: 0 0 30px 50px;
     }
