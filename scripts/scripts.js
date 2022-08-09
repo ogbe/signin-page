@@ -29,10 +29,10 @@ for (let i = 0; i < eyeIconsArr.length; i++) {
         if (eyeIcon.previousElementSibling.type === "password") {
             eyeIcon.previousElementSibling.type = "text";
             eyeIcon.previousElementSibling.style.padding = "12px";
-            eyeIcon.src = "../images/akar-icons_eye.svg";
+            eyeIcon.src = "./images/akar-icons_eye.svg";
             return;
         }
         eyeIcon.previousElementSibling.type = "password";
-        eyeIcon.src = "../images/eye-closed.png";
+        eyeIcon.src = "./images/eye-closed.png";
     })
 }
