@@ -1,31 +1,38 @@
 const emailInput = document.querySelector("#e-mail");
-const emailIcon = document.querySelector("#input-icon");
-const passwordInputs = document.querySelectorAll(".password-input");
+const usernameInput = document.querySelector("#username");
 const eyeIcons = document.querySelectorAll(".eye");
 
 
-emailInput.addEventListener("focus", () => {
-    emailIcon.style.display = "none";
-})
+const hideInputIcon = (input) => {
+    input.addEventListener("focus", () => {
+        input.previousElementSibling.style.display = "none";
+    });
+}
 
-emailInput.addEventListener("blur", () => {
-    emailIcon.style.display = "block";
-})
+const showInputIcon = (input) => {
+    input.addEventListener("blur", () => {
+        input.previousElementSibling.style.display = "block";
+    });
+}
+
+hideInputIcon(emailInput);
+hideInputIcon(usernameInput);
+
+showInputIcon(emailInput);
+showInputIcon(usernameInput);
 
 const eyeIconsArr = Array.from(eyeIcons);
 for (let i = 0; i < eyeIconsArr.length; i++) {
     const eyeIcon = eyeIcons[i];
     eyeIcon.addEventListener("click", () => {
 
-        const passwordInputsArr = Array.from(passwordInputs);
-        const passwordInput = passwordInputsArr[i];
-        if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            passwordInput.style.marginRight = "-22px"
-            eyeIcon.src = "../images/akar-icons_eye.svg"
+        if (eyeIcon.previousElementSibling.type === "password") {
+            eyeIcon.previousElementSibling.type = "text";
+            eyeIcon.previousElementSibling.style.padding = "12px";
+            eyeIcon.src = "../images/akar-icons_eye.svg";
             return;
         }
-        passwordInput.type = "password";
-        eyeIcon.src = "../images/eye-closed.png"
+        eyeIcon.previousElementSibling.type = "password";
+        eyeIcon.src = "../images/eye-closed.png";
     })
 }

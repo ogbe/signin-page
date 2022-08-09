@@ -74,7 +74,6 @@ form {
     flex-direction: column;
 }
 
-
 form > div {
     text-align: left;
     display: flex;
@@ -82,7 +81,7 @@ form > div {
     margin-top: -6px;
 }
 
-.email {
+.email, .username {
     margin: 0 7px 0 3px;
 }
 
@@ -101,12 +100,12 @@ input {
     width: 100%;
 }
 
-input[type="email"] {
+input[type="email"], input[type="text"] {
     padding-left: 40px;
-    margin-left: -20px
+    margin-left: -20px;
 }
 
-input[type="email"]:focus {
+input[type="email"]:focus, input[type="text"]:focus {
     padding-left: 12px;
     margin-left: 0;
 }
@@ -121,8 +120,9 @@ input::placeholder {
     display: flex;
 }
 
-input[type="password"] {
-    margin-right: -22px
+input[name="password"], input[name="confirm password"] {
+    margin: 10px -22px 0 0;
+    padding: 12px;
 }
 
 img[alt="input-icon"] {
@@ -263,7 +263,7 @@ img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-
         margin-top: 70px;
     }
 
-    input[type="email"] {
+    input[type="email"], input[type="text"] {
         padding-left: 50px;
     }
 
@@ -330,6 +330,14 @@ img[alt="cut-circle-mobile"], img[alt="cut-circle-tablet"], img[alt="cut-circle-
 
     form {
         margin-top: 0;
+    }
+
+    input[type="email"], input[type="text"] {
+        padding-left: 45px;
+    }
+
+    img[alt="input-icon"] {
+        left: 3%;
     }
 
     img[alt="hero-img-desktop"] {
